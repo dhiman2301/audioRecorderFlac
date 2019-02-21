@@ -8,7 +8,7 @@
 #import <Cordova/CDVPlugin.h>
 #import "AudioRecorderVC.h"
 
-@interface audioRecorderFlac : CDVPlugin <OSAudioRecorderDelegate>
+@interface AudioRecorderPluginFlac : CDVPlugin <OSAudioRecorderDelegate>
 
 @property (strong, nonatomic) CDVInvokedUrlCommand* commandHelper;
 

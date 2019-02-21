@@ -3,26 +3,26 @@
 version="0.0.1" 
 xmlns="http://apache.org/cordova/ns/plugins/1.0" 
 xmlns:android="http://schemas.android.com/apk/res/android">
-<name>audioRecorderFlac</name>
+<name>AudioRecorderFlac</name>
 <description>Record Audio easily with the device microphone in flac format</description>
 <license>MIT License</license>
 <keywords>cordova, outsystems, record, microphone, audio</keywords>
-<repo>https://github.com/dhiman2301/audioRecorderFlac.git</repo>
+<repo>https://github.com/dhiman2301/AudioRecorderFlac.git</repo>
 <issue></issue>
 
-<js-module name="audioRecorderFlac" src="www/audioRecorderFlac.js">
+<js-module name="AudioRecorder" src="www/AudioRecorder.js">
     <clobbers target="navigator.device.audiorecorder" />
 </js-module>
 
 <!-- ios -->
 <platform name="ios">
     <config-file parent="/*" target="config.xml">
-        <feature name="audioRecorderFlac">
-            <param name="ios-package" value="audioRecorderFlac" />
+        <feature name="AudioRecorderPluginFlac">
+            <param name="ios-package" value="AudioRecorderPluginFlac" />
         </feature>
     </config-file>
-    <header-file src="src/ios/AudioRecorderPlugin.h" />
-    <source-file src="src/ios/AudioRecorderPlugin.m" />
+    <header-file src="src/ios/AudioRecorderPluginFlac.h" />
+    <source-file src="src/ios/AudioRecorderPluginFlac.m" />
     <header-file src="src/ios/AudioRecorderVC.h" />
     <source-file src="src/ios/AudioRecorderVC.m" />
     <resource-file src="src/ios/OSAudioRecorder.bundle" />

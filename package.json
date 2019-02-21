@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-audio-recorder-flac",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Record Audio easily with the device microphone in flac format",
   "cordova": {
     "id": "cordova-plugin-audio-recorder-flac",

@@ -5,7 +5,7 @@
 //
 //
 
-#import "audioRecorderFlac.h"
+#import "AudioRecorderPlugin.h"
 
 @interface audioRecorderFlac ()
 

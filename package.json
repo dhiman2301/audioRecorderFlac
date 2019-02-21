@@ -1,0 +1,30 @@
+{
+  "name": "cordova-plugin-audio-recorder-flac",
+  "version": "0.0.1",
+  "description": "Record Audio easily with the device microphone in flac format",
+  "cordova": {
+    "id": "cordova-plugin-audio-recorder-flac",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhiman2301/audioRecorderFlac.git"
+  },
+  "keywords": [
+    "cordova",
+    "outsystems",
+    "record",
+    "microphone",
+    "audio",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "dhiman2301",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/dhiman2301/audioRecorderFlac/issues"
+  },
+  "homepage": "https://github.com/dhiman2301/audioRecorderFlac#readme"
+}

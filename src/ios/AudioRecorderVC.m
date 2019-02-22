@@ -105,7 +105,7 @@ typedef NS_ENUM(NSUInteger, OSRecorderState) {
     NSFileManager* fileMgr = [[NSFileManager alloc] init];
     
     // Create a sub-folder to contain the recordings...
-    NSString* containerFolder = @"OSAudioRecordings";
+    NSString* containerFolder = @"OSLinearAudioRecordings";
     NSString* containerPath = [NSString stringWithFormat:@"%@/%@", docsPath, containerFolder];
 
     [fileMgr createDirectoryAtURL:[NSURL fileURLWithPath:containerPath isDirectory:YES] withIntermediateDirectories:NO attributes:nil error: &err];
@@ -117,9 +117,9 @@ typedef NS_ENUM(NSUInteger, OSRecorderState) {
     int i = 1;
     do {
         if(containerExists){
-            filePath = [NSString stringWithFormat:@"%@/temp_%03d.flac", containerPath, i++];
+            filePath = [NSString stringWithFormat:@"%@/temp_%03d.raw", containerPath, i++];
         } else {
-            filePath = [NSString stringWithFormat:@"%@/temp_%03d.flac", docsPath, i++];
+            filePath = [NSString stringWithFormat:@"%@/temp_%03d.raw", docsPath, i++];
         }
     } while ([fileMgr fileExistsAtPath:filePath]);
     
@@ -127,7 +127,7 @@ typedef NS_ENUM(NSUInteger, OSRecorderState) {
     
     // create AVAudioRecorder with AAC encoding
     NSDictionary *recordSetting = [NSDictionary dictionaryWithObjectsAndKeys:
-                                   [NSNumber numberWithInt: kAudioFormatFLAC], AVFormatIDKey,
+                                   [NSNumber numberWithInt: kAudioFormatLinearPCM], AVFormatIDKey,
                                    [NSNumber numberWithInt: AVAudioQualityMedium], AVEncoderAudioQualityKey,
                                    [NSNumber numberWithFloat:44100.0], AVSampleRateKey, // Good enough for speech
                                    [NSNumber numberWithInt:32768], AVEncoderBitRateKey,

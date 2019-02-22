@@ -1,19 +1,19 @@
 //
-//  AudioRecorderPluginFlac.h
+//  AudioRecorderPluginLinear.h
 //
 //  Created by Saurabh on 21/02/2019.
 //
 //
 
-#import "AudioRecorderPluginFlac.h"
+#import "AudioRecorderPluginLinear.h"
 
-@interface AudioRecorderPluginFlac ()
+@interface AudioRecorderPluginLinear ()
 
 @property (nonatomic, strong) AudioRecorderVC* audioRecorderVc;
 @property (strong, nonatomic) NSString* callbackId;
 @end
 
-@implementation AudioRecorderPluginFlac
+@implementation AudioRecorderPluginLinear
 
 - (void) recordAudio:(CDVInvokedUrlCommand *)command {
     self.callbackId = command.callbackId;
@@ -88,7 +88,7 @@
                 [self respondErrorTo:self.callbackId withErroCode:reason andErrorMessage:@"User cancelled recording."];
                 break;
             case OS_INTERNAL_ERROR:
-                [self respondErrorTo:self.callbackId withErroCode:reason andErrorMessage:@"AudioRecorderPluginFlac internal error."];
+                [self respondErrorTo:self.callbackId withErroCode:reason andErrorMessage:@"AudioRecorderPluginLinear internal error."];
                 break;
             case OS_PERMISSION_DENIED:
                 [self respondErrorTo:self.callbackId withErroCode:reason andErrorMessage:@"Permission denied."];

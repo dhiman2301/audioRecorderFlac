@@ -1,5 +1,5 @@
 //
-//  audioRecorderFlac.h
+//  audioRecorderLinear.h
 //
 //  Created by Saurabh on 21/02/2019.
 //
@@ -8,7 +8,7 @@
 #import <Cordova/CDVPlugin.h>
 #import "AudioRecorderVC.h"
 
-@interface AudioRecorderPluginFlac : CDVPlugin <OSAudioRecorderDelegate>
+@interface AudioRecorderPluginLinear : CDVPlugin <OSAudioRecorderDelegate>
 
 @property (strong, nonatomic) CDVInvokedUrlCommand* commandHelper;
 
